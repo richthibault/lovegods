@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="headtags" th:remove="tag">
+
+	    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="/img/favicon-16x16.png" sizes="16x16" />
+		<link rel="icon" href="/img/favicon-32x32.png" sizes="32x32" />
+		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+
+		<link rel="stylesheet" th:href="@{/css/styles.css}">
+
+</head>
+
+<body>
+
+	<div th:fragment="header" th:remove="tag">
+
+	</div>
+
+	<div th:fragment="footer" th:remove="tag">
+
+		<footer>
+			<div style="margin-top:20px">
+				<div><strong>POWERED BY</strong></div>
+				<div><a href="https://www.exquisiteloop.com" target="_blank"><img th:src="@{/img/exqloop.png}" width="150" height="99" alt="Exquisite Loop"></a></div>
+				<div style="font-size:8pt">Web Design, Development, and Hosting</div>
+			</div>
+			<div class="copyright">
+				Copyright <span class="copyright-years">2026</span> - All Rights Reserved
+			</div>
+		</footer>
+
+		<th:block th:if="${!#strings.isEmpty(googleAnalyticsId)}">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async="true" th:src="@{https://www.googletagmanager.com/gtag/js(id=${googleAnalyticsId})}"></script>
+		<script th:inline="javascript">
+		/*<![CDATA[*/
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		
+		gtag('config', /*[[${googleAnalyticsId}]]*/ '');    
+		/*]]>*/
+		</script>
+		</th:block>
+
+		<th:block th:if="${!#strings.isEmpty(googleRecaptchaSiteKey)}">
+    	<script th:src="@{https://www.google.com/recaptcha/api.js(render=${googleRecaptchaSiteKey})}"></script>
+		</th:block>
+
+		<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const startYear = 2026;
+			const currentYear = new Date().getFullYear();
+			const str = currentYear > startYear ? `${startYear}-${currentYear}` : currentYear;
+			document.querySelectorAll('.copyrightYears').forEach(el => el.textContent = str);
+		});
+		</script>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Lovegods in Leisure Suits</title>
+	<meta name="description" content="Lovegods in Leisure Suits is a band from Florida. We play a funky brew of punk rock mixed with disco and blues.">
+	<meta name="keywords" content="Lovegods in Leisure Suits, Lovegods, Leisure Suits">
+	<meta name="author" content="Lovegods in Leisure Suits">
+
+	<th:block th:replace="~{layouts/main :: headtags}"></th:block>
+</head>
+
+<body>
+
+	<header>
+		<nav class="navbar">
+			<a class="navbar-brand" th:href="@{/}">
+				<img th:src="@{/img/lovegod-head.png}" alt="Lovegods in Leisure Suits" class="nav-logo">
+			</a>
+			<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<ul class="nav-links">
+				<li><a th:href="@{/}" class="active">Home</a></li>
+				<li><a th:href="@{/bio}">Bio</a></li>
+				<li><a th:href="@{/music}">Music</a></li>
+				<li><a th:href="@{/videos}">Videos</a></li>
+				<li><a th:href="@{/gallery}">Gallery</a></li>
+				<li><a th:href="@{/contact}">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero">
+			<img th:src="@{/img/logo-full.png}" alt="Lovegods in Leisure Suits" class="hero-logo">
+			<p class="hero-tagline">Rising from the Florida swamps</p>
+		</section>
+	</main>
+
+	<th:block th:replace="~{layouts/main :: footer}"></th:block>
+
+	<script>
+	const toggle = document.querySelector('.nav-toggle');
+	const navLinks = document.querySelector('.nav-links');
+	toggle.addEventListener('click', () => {
+		const expanded = toggle.getAttribute('aria-expanded') === 'true';
+		toggle.setAttribute('aria-expanded', !expanded);
+		navLinks.classList.toggle('open');
+	});
+	</script>
+
+</body>
+</html>
