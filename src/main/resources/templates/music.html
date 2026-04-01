@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Music — Lovegods in Leisure Suits</title>
+	<meta name="author" content="Lovegods in Leisure Suits">
+
+	<th:block th:replace="~{layouts/main :: headtags}"></th:block>
+</head>
+
+<body>
+
+	<th:block th:replace="~{layouts/main :: header}"></th:block>
+
+	<main>
+		<div class="container">
+
+			<h1>Music</h1>
+
+			<div class="carousel" id="album-carousel">
+
+				<!-- Navigation -->
+				<div class="carousel-nav" role="group" aria-label="Album navigation">
+					<button class="carousel-btn" id="btn-prev" aria-label="Previous album">&#8249;</button>
+					<div class="carousel-dots" role="tablist">
+						<button class="carousel-dot active" role="tab" aria-label="Life in a Dacron Hell" aria-selected="true"></button>
+						<button class="carousel-dot" role="tab" aria-label="Come Here Often?" aria-selected="false"></button>
+						<button class="carousel-dot" role="tab" aria-label="Groove On It" aria-selected="false"></button>
+					</div>
+					<button class="carousel-btn" id="btn-next" aria-label="Next album">&#8250;</button>
+				</div>
+
+				<div class="carousel-viewport">
+					<div class="carousel-track">
+
+						<!-- ── Life in a Dacron Hell ── -->
+						<article class="carousel-slide">
+							<h2 class="album-title">Life in a Dacron Hell <span class="album-year">1987</span></h2>
+							<img th:src="@{/img/albums/dacron-hell.jpg}" alt="Life in a Dacron Hell album cover" class="album-cover">
+							<div class="album-body">
+								<div class="album-description">
+									<p>Released in 1987 on cassette, <em>Life in a Dacron Hell</em> is the Lovegods'
+									debut recording. Raw, fast, and irreverent — it introduced the world to their
+									funky brew of punk, blues, and polyester absurdism.</p>
+								</div>
+								<div class="album-player">
+									<iframe src="https://bandcamp.com/EmbeddedPlayer/album=1772777358/size=large/bgcol=1a1612/linkcol=e6a820/artwork=small/transparent=true/"
+										width="400" height="472"
+										seamless
+										title="Life in a Dacron Hell by Lovegods in Leisure Suits">
+										<a href="https://lovegodsinleisuresuits.bandcamp.com/album/life-in-a-dacron-hell">Life In A Dacron Hell by Lovegods in Leisure Suits</a>
+									</iframe>
+								</div>
+							</div>
+						</article>
+
+						<!-- ── Come Here Often? ── -->
+						<article class="carousel-slide">
+							<h2 class="album-title">Come Here Often? <span class="album-year">1989</span></h2>
+							<img th:src="@{/img/albums/come-here-often.jpg}" alt="Come Here Often? album cover" class="album-cover">
+							<div class="album-body">
+								<div class="album-description">
+									<p>Released in 1989 on vinyl, <em>Come Here Often?</em> is the Lovegods' first
+									full-length LP. Loud, fast, and played with wild abandon — featuring
+									<em>Lovegod</em>, <em>Fashion Horse</em>, and the epic blues banger <em>7 or 11</em>,
+									plus a tongue-in-cheek take on the Bee Gees' <em>How Deep Is Your Love</em>.</p>
+								</div>
+								<div class="album-player">
+									<iframe src="https://bandcamp.com/EmbeddedPlayer/album=2950116546/size=large/bgcol=1a1612/linkcol=e6a820/artwork=small/transparent=true/"
+										width="400" height="472"
+										seamless
+										title="Come Here Often? by Lovegods in Leisure Suits">
+										<a href="https://lovegodsinleisuresuits.bandcamp.com/album/come-here-often">Come Here Often? by Lovegods in Leisure Suits</a>
+									</iframe>
+								</div>
+							</div>
+						</article>
+
+						<!-- ── Groove On It ── -->
+						<article class="carousel-slide">
+							<h2 class="album-title">Groove On It <span class="album-year">1990</span></h2>
+							<img th:src="@{/img/albums/groove-on-it.jpg}" alt="Groove On It album cover" class="album-cover">
+							<div class="album-body">
+								<div class="album-description">
+									<p>Released in 1990 on cassette, <em>Groove On It</em> is the Lovegods' third
+									and final album — and a major progression in songwriting. Leaning harder into
+									metal and funk, it features <em>Propaganda</em>, <em>The Day Elvis Presley Died</em>,
+									and a scorching take on <em>You Sexy Thing</em>. The album earned the band a
+									Jammy Award from local <em>Jam Magazine</em>.</p>
+								</div>
+							</div>
+						</article>
+
+					</div><!-- /.carousel-track -->
+				</div><!-- /.carousel-viewport -->
+
+			</div><!-- /.carousel -->
+
+		</div>
+	</main>
+
+	<th:block th:replace="~{layouts/main :: footer}"></th:block>
+
+	<script th:src="@{/js/music.js}"></script>
+
+</body>
+</html>

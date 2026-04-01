@@ -68,6 +68,27 @@
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.google.cloud</groupId>
+			<artifactId>google-cloud-recaptchaenterprise</artifactId>
+			<version>3.79.0</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.commonmark</groupId>
+		    <artifactId>commonmark</artifactId>
+		    <version>0.27.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.commonmark</groupId>
+		    <artifactId>commonmark-ext-gfm-tables</artifactId>
+		    <version>0.27.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.commonmark</groupId>
+		    <artifactId>commonmark-ext-image-attributes</artifactId>
+		    <version>0.27.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>

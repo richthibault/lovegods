@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Contact — Lovegods in Leisure Suits</title>
+	<meta name="author" content="Lovegods in Leisure Suits">
+
+	<th:block th:replace="~{layouts/main :: headtags}"></th:block>
+
+</head>
+
+<body class="with-captcha">
+
+	<th:block th:replace="~{layouts/main :: header}"></th:block>
+
+	<main>
+		<div class="container">
+			<div class="contact-wrap">
+
+				<h1>Get in Touch</h1>
+				<p class="contact-intro">Booking inquiries, fan mail, polyester-related questions — we'd love to hear from you.</p>
+
+				<form id="contact-form" class="contact-form" th:object="${contactForm}" novalidate>
+					<th:block th:if="${!#strings.isEmpty(googleRecaptchaSiteKey)}">
+						<input type="hidden" id="recaptchaSiteKey" th:value="${googleRecaptchaSiteKey}">
+						<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+					</th:block>
+
+					<div class="form-field">
+						<label for="email" class="form-label">Your Email</label>
+						<input type="email" id="email" name="email" class="form-input"
+							   th:value="*{email}"
+							   placeholder="you@example.com"
+							   autocomplete="email"
+							   required>
+					</div>
+
+					<div class="form-field">
+						<label for="message" class="form-label">Your Message</label>
+						<textarea id="message" name="message" class="form-input form-textarea"
+								  th:text="*{message}"
+								  placeholder="What's on your mind?"
+								  required></textarea>
+					</div>
+
+					<div class="form-footer">
+						<p class="recaptcha-notice" th:if="${!#strings.isEmpty(googleRecaptchaSiteKey)}">
+							Protected by reCAPTCHA —
+							<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a>
+							&amp;
+							<a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms</a>
+						</p>
+						<button type="submit" class="btn btn-primary contact-submit" id="submit-btn">
+							Send It
+						</button>
+					</div>
+				</form>
+
+				<div class="contact-success" id="contact-success" aria-live="polite" hidden>
+					<div class="contact-success-icon">&#10003;</div>
+					<h2>Message sent!</h2>
+					<p>We'll get back to you soon. In the meantime, why not <a th:href="@{/music}">listen to some tunes</a>?</p>
+				</div>
+
+				<div class="contact-error" id="contact-error" aria-live="assertive" hidden>
+					<strong>Something went wrong:</strong> <span id="contact-error-msg"></span>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<th:block th:replace="~{layouts/main :: footer}"></th:block>
+
+	<script th:src="@{/js/contact.js}"></script>
+
+</body>
+</html>

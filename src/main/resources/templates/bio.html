@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Bio — Lovegods in Leisure Suits</title>
+	<meta name="author" content="Lovegods in Leisure Suits">
+
+	<th:block th:replace="~{layouts/main :: headtags}"></th:block>
+</head>
+
+<body>
+
+	<th:block th:replace="~{layouts/main :: header}"></th:block>
+
+	<main>
+		<div class="container">
+			<h1>Band Bio</h1>
+			<div class="bio-content" th:utext="${bioHtml}"></div>
+		</div>
+	</main>
+
+	<th:block th:replace="~{layouts/main :: footer}"></th:block>
+
+</body>
+</html>

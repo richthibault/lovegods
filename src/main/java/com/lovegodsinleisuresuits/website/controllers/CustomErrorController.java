@@ -1,6 +1,5 @@
 package com.lovegodsinleisuresuits.website.controllers;
 
-import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.springframework.boot.webmvc.error.ErrorController;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,13 +9,13 @@ import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
 
 @Controller
-public class CustomErrorController implements ErrorController {
+public class CustomErrorController extends BaseController implements ErrorController {
 
     @RequestMapping("/error")
     public String handleError(HttpServletRequest request, Model model) {
 
-		Throwable exception = (Throwable) request.getAttribute(RequestDispatcher.ERROR_EXCEPTION);
-		Throwable rootCause = ExceptionUtils.getRootCause(exception);
+		//Throwable exception = (Throwable) request.getAttribute(RequestDispatcher.ERROR_EXCEPTION);
+		//Throwable rootCause = ExceptionUtils.getRootCause(exception);
 
 		Object status = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
         Object message = request.getAttribute(RequestDispatcher.ERROR_MESSAGE);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title>Lovegods in Leisure Suits</title>
 	<meta name="description" content="Lovegods in Leisure Suits is a band from Florida. We play a funky brew of punk rock mixed with disco and blues.">
@@ -11,45 +11,29 @@
 
 <body>
 
-	<header>
-		<nav class="navbar">
-			<a class="navbar-brand" th:href="@{/}">
-				<img th:src="@{/img/lovegod-head.png}" alt="Lovegods in Leisure Suits" class="nav-logo">
-			</a>
-			<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-				<span></span>
-				<span></span>
-				<span></span>
-			</button>
-			<ul class="nav-links">
-				<li><a th:href="@{/}" class="active">Home</a></li>
-				<li><a th:href="@{/bio}">Bio</a></li>
-				<li><a th:href="@{/music}">Music</a></li>
-				<li><a th:href="@{/videos}">Videos</a></li>
-				<li><a th:href="@{/gallery}">Gallery</a></li>
-				<li><a th:href="@{/contact}">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<th:block th:replace="~{layouts/main :: header}"></th:block>
 
 	<main>
+		<div class="container">
 		<section class="hero">
-			<img th:src="@{/img/logo-full.png}" alt="Lovegods in Leisure Suits" class="hero-logo">
-			<p class="hero-tagline">Rising from the Florida swamps</p>
+			<img th:src="@{/img/logo-full.png}" alt="Lovegods in Leisure Suits" class="hero-logo" width="2708" height="1244" fetchpriority="high">
+			<p class="hero-tagline">
+				Rising from the Florida swamps...it's the Dukes of Dacron, the Rastas of Rayon, the Princes of Polyester, 
+				the most flammable band in Florida...the LOVEGODS IN LEISURE SUITS.</p>
 		</section>
+		<section class="sub-hero">
+			<p class="hero-subtitle">
+				<div style="float:left;margin:0 30px 30px 0;"><a href="https://clubspacefish.com" target="_blank"><img th:src="@{/img/spacefish-flyer-sm.jpg}" alt="Club Space Fish" width="150" height="232"></a></div>
+				 <!--/* After a 34-year hiatus, the Lovegods are back and ready to rock your leisure suits off! */-->
+				<strong>Mark your calendars! May 16, 2026:</strong> For the first time in 34 years, the Lovegods will be donning 
+				their finest leisure suits and hitting the stage to deliver hits from all their releases. 
+				Get your groove on and boogie on down to their polyester onslaught!</p>
+			<p class="hero-subtitle">For more info, check out <a href="https://clubspacefish.com" target="_blank">Club Spacefish</a>.</p>
+		</section>
+		</div>
 	</main>
 
 	<th:block th:replace="~{layouts/main :: footer}"></th:block>
-
-	<script>
-	const toggle = document.querySelector('.nav-toggle');
-	const navLinks = document.querySelector('.nav-links');
-	toggle.addEventListener('click', () => {
-		const expanded = toggle.getAttribute('aria-expanded') === 'true';
-		toggle.setAttribute('aria-expanded', !expanded);
-		navLinks.classList.toggle('open');
-	});
-	</script>
 
 </body>
 </html>

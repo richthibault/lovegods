@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Videos — Lovegods in Leisure Suits</title>
+	<meta name="author" content="Lovegods in Leisure Suits">
+
+	<th:block th:replace="~{layouts/main :: headtags}"></th:block>
+</head>
+
+<body>
+
+	<th:block th:replace="~{layouts/main :: header}"></th:block>
+
+	<main>
+		<div class="container">
+			<h1>Videos</h1>
+			<div class="video-grid-x">
+				<div class="video-card" th:each="video : ${videos}">
+					<div class="video-embed">
+						<iframe
+							th:src="${video.embedUrl}"
+							th:title="${video.title}"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+							loading="lazy">
+						</iframe>
+					</div>
+					<p class="video-title" th:text="${video.title}"></p>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<th:block th:replace="~{layouts/main :: footer}"></th:block>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+Members:
+Michael Bales - Lead Vocals (1987-1992)
+Rich Thibault - Drums (1987-1991)
+Kevin Berve - Guitar (1987 - 1990)
+Tom Arline - Bass (1987 - 1989)
+Robert Wainwright - Guitar (1990 - 1992)
+Chuck Curameng - Bass (1989-1991)
+Jason Ackerman - Bass (1991-1992)
+Sean Cote - Drums (1991-1992)
+
+![The Lovegods in Leisure Suits, 1990 promo photo](/img/gallery/1990_promo-photo.jpg){.bio-photo .float-right}
+
+![The Lovegods in Leisure Suits live, 1992](/img/gallery/Photos2.jpg){.bio-photo .float-left}
+
+The Lovegods in Leisure Suits were formed in 1987 in Central Florida. Lead singer Michael Bales met original bassist Tom Arline while hanging out on Orlando's fledgling punk rock scene. They found they shared not only a love of punk music, but also the same absurd sense of humor. Disgusted by the womanizing, toxic-male types he saw out on the scene, Michael made the comment "All this guy needs is a leisure suit, then he's be a real lovegod," and the Lovegods in Leisure Suits were born. 
+
+Taking their musical cues from acts as disparate as The Cramps, Devo, Dead Kennedys, Crass, and old blues artists, and their style and fashion cues from the cheesy lounge-lizard style of the 1970s, Michael and Tom set out to complete the band, finding guitarist Kevin Berve (aka Road Narrows) from a Musician Wanted ad. A Colorado native, Kevin brought a more rock and blues sensibility to the band.
+
+Despite the initial lack of a full-time drummer, they recorded their first demo cassette, *Life in a Dacron Hell*, in 1987, featuring such iconic tracks as Science Is Getting Better, Lust for Food, and Good God Gone Bad. Michael brought his graphical design training to bear in designing cover art and flyers for the band. By year's end, they would find Rich Thibault to take over the drumkit full time. Rich brought along his passion for progressive rock and odd time signatures. The band began playing house parties and small bars around Gainesville and Orlando, playing high-energy punk while decked out in 70s polyester shirts and leisure jackets.
+
+It was at one of these house parties that Michael Bales met Michael Brown of legendary synthpunk band Damage. The two hit it off, and decided to join forces to create Space Fish Records. The small label became an outlet for underground music in Central Florida, releasing albums by Damage, Riddlers, Bloody Mary, and Target Earth. In 1989, Space Fish released the first full length Lovegods LP, *Come Here Often?*, which featured such blistering tracks as Lovegod, Fashion Horse, and the epic blues banger 7 or 11. Keeping to their 70s theme, the album included a tongue-in-cheek take on the Bee Gees' How Deep Is Your Love. The music was loud, fast, laden with sarcasm, and played with wild abandon. 
+
+Soon, Space Fish took over the Beach Club in downtown Orlando on Wednesday nights, transforming the popular night spot into Club Space Fish. The club hosted special theme nights ranging from the barbecue-centered Kiss the Cook, to the gladiator-themed Roman Orgy, to games of chance with the Wheel of Fish, and even to charity events like Mars Needs Tuna. The club would host local talent, including the Space Fish Records roster, as well as national touring bands.
+
+The Lovegods began playing more regional shows, branching out to Tampa, Miami, Atlanta, and a particularly enthusiastic Pensacola. They opened for 7 Seconds at the University of Central Florida (UCF), and Scream at University of Florida (UF). They traveled to New York City with labelmates Damage to play the College Music Journal (CMJ) Music Marathon, and later did an East Coast "Freakshow" Tour together, playing everywhere from Florida to Connecticut.
+
+Original members Kevin and Tom left the band in 1990, and guitarist Robert Wainwright and bassist Chuck Curameng stepped in to fill the void. Together they would record 1990's *Groove On It*, a major progression in the band's approach to songwriting. Leaning more into metal and hard rock than previous efforts, tracks included Propaganda, The Day Elvis Presley Died, and a funky take on the disco-era classic You Sexy Thing. The album earned the band a prestigious "Best Band" Jammy Award from local Jam Magazine, and the band was featured at the awards ceremony at the Bob Carr Performing Arts Centre, performing cuts from the album as go go dancers gyrated wildly on stage.
+
+Chuck and Rich would leave the band in 1991, and were replaced by Jason Ackerman on bass and Sean Cote on drums. This final iteration of the band would gig heavily, putting on an elaborate stage featuring lighting effects and the RPM dancers. Finally, the band would call it quits in 1992 after the Fur Is Dead show at the Beacham Theater.
+
+But in 2026, the band reunited with (almost) all past members to play one final show - the Club Space Fish reunion, at Conduit, Winter Park, FL.

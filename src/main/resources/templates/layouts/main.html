@@ -9,6 +9,11 @@
 		<link rel="icon" href="/img/favicon-32x32.png" sizes="32x32" />
 		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
 
+		<!-- Barlow Condensed (display) + Barlow (body) — 70s concert poster / record label lettering -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+
 		<link rel="stylesheet" th:href="@{/css/styles.css}">
 
 </head>
@@ -17,19 +22,47 @@
 
 	<div th:fragment="header" th:remove="tag">
 
+		<header>
+			<nav class="navbar" aria-label="Main">
+				<a class="navbar-brand" th:href="@{/}">
+					<img th:src="@{/img/logo-sm.png}" alt="Lovegods in Leisure Suits" class="nav-logo">
+				</a>
+				<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<ul class="nav-links" id="primary-nav">
+					<li><a th:href="@{/}">Home</a></li>
+					<li><a th:href="@{/bio}">Bio</a></li>
+					<li><a th:href="@{/music}">Music</a></li>
+					<li><a th:href="@{/videos}">Videos</a></li>
+					<li><a th:href="@{/gallery}">Gallery</a></li>
+					<li><a th:href="@{/contact}">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
 	</div>
 
 	<div th:fragment="footer" th:remove="tag">
 
 		<footer>
-			<div style="margin-top:20px">
-				<div><strong>POWERED BY</strong></div>
-				<div><a href="https://www.exquisiteloop.com" target="_blank"><img th:src="@{/img/exqloop.png}" width="150" height="99" alt="Exquisite Loop"></a></div>
-				<div style="font-size:8pt">Web Design, Development, and Hosting</div>
+			<div class="footer-sponsor">
+				<div><strong>The Fish is Back! Returning for one night only! May 16, 2026:</strong></div>
+				<a href="https://www.clubspacefish.com" target="_blank"><img th:src="@{/img/spacefish-logo.png}" style="max-height:70px;" alt="Club Spacefish"></a>
+			</div>	
+
+			<div class="footer-sponsor">
+				<div><strong>Website powered by:</strong></div>
+				<div><a href="https://www.exquisiteloop.com" target="_blank"><img th:src="@{/img/exqloop-darkbg.png}" style="max-height:100px;" alt="Exquisite Loop"></a></div>
+				<div class="footer-sponsor-label">Web Design, Development, and Hosting</div>
 			</div>
+
 			<div class="copyright">
 				Copyright <span class="copyright-years">2026</span> - All Rights Reserved
 			</div>
+
 		</footer>
 
 		<th:block th:if="${!#strings.isEmpty(googleAnalyticsId)}">
@@ -50,14 +83,8 @@
     	<script th:src="@{https://www.google.com/recaptcha/api.js(render=${googleRecaptchaSiteKey})}"></script>
 		</th:block>
 
-		<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			const startYear = 2026;
-			const currentYear = new Date().getFullYear();
-			const str = currentYear > startYear ? `${startYear}-${currentYear}` : currentYear;
-			document.querySelectorAll('.copyrightYears').forEach(el => el.textContent = str);
-		});
-		</script>
+		<script th:src="@{/js/globals.js}"></script>
+
 	</div>
 
 </body>

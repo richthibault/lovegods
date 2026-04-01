@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Gallery — Lovegods in Leisure Suits</title>
+	<meta name="author" content="Lovegods in Leisure Suits">
+
+	<th:block th:replace="~{layouts/main :: headtags}"></th:block>
+</head>
+
+<body>
+
+	<th:block th:replace="~{layouts/main :: header}"></th:block>
+
+	<main>
+		<div class="container">
+			<h1>Gallery</h1>
+
+			<div class="gallery-grid">
+				<button class="gallery-thumb"
+						th:each="image, iter : ${images}"
+						th:data-src="${image.src}"
+						th:data-alt="${image.alt}"
+						th:aria-label="|View full size: ${image.alt}|">
+					<img th:src="${image.src}" th:alt="${image.alt}" loading="lazy">
+				</button>
+			</div>
+		</div>
+	</main>
+
+	<!-- Lightbox -->
+	<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
+		<button class="lightbox-close" id="lightbox-close" aria-label="Close photo viewer">&#x2715;</button>
+		<button class="lightbox-btn lightbox-prev" id="lightbox-prev" aria-label="Previous photo">&#8249;</button>
+		<div class="lightbox-img-wrap">
+			<img class="lightbox-img" id="lightbox-img" src="" alt="">
+		</div>
+		<button class="lightbox-btn lightbox-next" id="lightbox-next" aria-label="Next photo">&#8250;</button>
+		<span class="lightbox-counter" id="lightbox-counter" aria-live="polite"></span>
+	</div>
+
+	<th:block th:replace="~{layouts/main :: footer}"></th:block>
+
+	<script th:src="@{/js/gallery.js}"></script>
+
+</body>
+</html>
