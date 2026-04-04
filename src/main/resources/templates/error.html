@@ -7,10 +7,11 @@
 <body>
 <th:block th:insert="~{layouts/main :: header}"></th:block>
 <main>
+	<div class="container">
 	<img src="/img/godzilla.jpg" class="error-img" alt="Godzilla stomping through a city">
 	<div class="error-wrap">
 		<div class="error-tagline">
-			<h1>AAAYYYYYHHHHHMMMMMMMMMMMMMM!!!!!!!!</h1>
+			<h1>AAAYYYYYHHHHHMMMMMMM!!!!!</h1>
 			<p>Looks like Godzilla just stomped on this page and broke it. Sorry about that.</p>
 		</div>
 		<div class="error-message" th:text="${message}">Something went wrong.</div>
@@ -20,6 +21,7 @@
 		<div class="error-note">
 			Status: <span th:text="${status}"></span>
 		</div>
+	</div>
 	</div>
 </main>
 <th:block th:insert="~{layouts/main :: footer}"></th:block>

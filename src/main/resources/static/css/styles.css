@@ -403,8 +403,19 @@ main {
 }
 
 .sub-hero {
-	  max-width: 600px;
-	  margin: 0 auto;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.sub-hero::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.sub-hero-flyer {
+  float: left;
+  margin: 0 var(--space-8) var(--space-8) 0;
 }
 
 .hero-subtitle {
@@ -542,6 +553,7 @@ main {
 }
 
 .lineup-intro__text p {
+  margin-top: var(--space-3);
   color: var(--color-text-secondary);
   font-size: var(--text-lg);
   line-height: var(--leading-loose);
@@ -618,6 +630,7 @@ main {
   text-transform: uppercase;
   color: oklch(18% 0.015 55);
   line-height: var(--leading-snug);
+  margin-bottom: 0;  /* override global h3 margin */
 }
 
 .member-role {
@@ -765,17 +778,30 @@ footer strong {
 .bio-photo {
   max-width: 280px;
   width: 100%;
-  border-radius: var(--radius-md);
+  /* Narrow warm frame — echoes the polaroid treatment elsewhere */
+  padding: 6px;
+  background: oklch(93% 0.008 75);
+  border-radius: 2px;
+  box-shadow: 0 4px 18px oklch(0% 0 0 / 0.55), 0 1px 4px oklch(0% 0 0 / 0.3);
 }
 
 .float-left {
   float: left;
-  margin: 0 var(--space-8) var(--space-4) 0;
+  margin: var(--space-2) var(--space-8) var(--space-6) 0;
+  transform: rotate(-1.5deg);
 }
 
 .float-right {
   float: right;
-  margin: 0 0 var(--space-4) var(--space-8);
+  margin: var(--space-2) 0 var(--space-6) var(--space-8);
+  transform: rotate(1.5deg);
+}
+
+.bio-rule {
+  clear: both;
+  border: none;
+  border-top: 1px solid var(--color-border-subtle);
+  margin: var(--space-10) 0;
 }
 
 /* Clearfix so the container stretches around floated images */
@@ -787,10 +813,11 @@ footer strong {
 
 @media (max-width: 640px) {
   .bio-photo {
-    float: none;
+    float: none !important;
     display: block;
     max-width: 100%;
-    margin: 0 0 var(--space-6) 0;
+    margin: 0 0 var(--space-6) 0 !important;
+    transform: none !important;
   }
 }
 
@@ -1349,6 +1376,7 @@ footer strong {
   }
 
 }
+
 
 /* ── Reduced Motion ──────────────────────────────────────────────────────── */
 
