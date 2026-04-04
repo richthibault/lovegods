@@ -21,9 +21,27 @@
 				Rising from the Florida swamps...it's the Dukes of Dacron, the Rastas of Rayon, the Princes of Polyester, 
 				the most flammable band in Florida...the LOVEGODS IN LEISURE SUITS.</p>
 		</section>
+		<section class="home-photos">
+			<div class="photo-frame photo-frame--1">
+				<img th:src="@{/img/gallery/LG-2-1990.jpg}" alt="Lovegods in Leisure Suits 1990">
+			</div>
+			<div class="photo-frame photo-frame--2">
+				<img th:src="@{/img/gallery/1990_promo-photo.jpg}" alt="Lovegods in Leisure Suits 1990">
+			</div>
+			<div class="photo-frame photo-frame--3">
+				<img th:src="@{/img/gallery/lovegods_91_photo_duo.jpg}" alt="Lovegods in Leisure Suits 1991">
+			</div>
+			<div class="photo-frame photo-frame--4">
+				<img th:src="@{/img/gallery/1992-color-promo-photo.jpg}" alt="Lovegods in Leisure Suits 1992">
+			</div>
+		</section>
 		<section class="sub-hero">
 			<p class="hero-subtitle">
-				<div style="float:left;margin:0 30px 30px 0;"><a href="https://clubspacefish.com" target="_blank"><img th:src="@{/img/spacefish-flyer-sm.jpg}" alt="Club Space Fish" width="150" height="232"></a></div>
+				<div style="float:left;margin:0 30px 30px 0;">
+					<a href="https://clubspacefish.com" target="_blank" class="lineup-flyer-link">
+						<img th:src="@{/img/spacefish-flyer-sm.jpg}" alt="Club Space Fish" width="200" height="310">
+					</a>
+				</div>
 				 <!--/* After a 34-year hiatus, the Lovegods are back and ready to rock your leisure suits off! */-->
 				<strong>Mark your calendars! May 16, 2026:</strong> For the first time in 34 years, the Lovegods will be donning 
 				their finest leisure suits and hitting the stage to deliver hits from all their releases. 
@@ -34,6 +52,8 @@
 	</main>
 
 	<th:block th:replace="~{layouts/main :: footer}"></th:block>
+
+	<script th:src="@{/js/home.js}"></script>
 
 </body>
 </html>

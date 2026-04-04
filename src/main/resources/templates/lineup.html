@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Lineup — Lovegods in Leisure Suits</title>
+	<meta name="description" content="Meet the Lovegods in Leisure Suits band lineup for their 2026 reunion show.">
+	<meta name="author" content="Lovegods in Leisure Suits">
+
+	<th:block th:replace="~{layouts/main :: headtags}"></th:block>
+</head>
+
+<body>
+
+	<th:block th:replace="~{layouts/main :: header}"></th:block>
+
+	<main>
+		<div class="container">
+
+			<section class="lineup-intro">
+				<div class="lineup-intro__text">
+					<h1>The Lineup</h1>
+					<p>Lovegods past and present will reunite for a special one-off show on <strong>May&nbsp;16,&nbsp;2026</strong>, at <strong>Conduit in Winter Park</strong>. For more info, check out <a href="https://clubspacefish.com" target="_blank">Club Spacefish</a>.</p>
+				</div>
+				<a href="https://clubspacefish.com" target="_blank" class="lineup-flyer-link">
+					<img th:src="@{/img/spacefish-flyer-sm.jpg}" alt="Club Spacefish show flyer" width="200" height="310">
+				</a>
+			</section>
+
+			<section class="lineup-grid" aria-label="Band members">
+
+				<div class="member-card">
+					<img th:src="@{/img/lineup/michael.png}" alt="Michael Bales" class="member-photo">
+					<div class="member-info">
+						<div class="member-name">Michael Bales</div>
+						<div class="member-role">Lead Vocals</div>
+						<div class="member-years">1987–1992, 2026</div>
+					</div>
+				</div>
+
+				<div class="member-card">
+					<img th:src="@{/img/lineup/tom.png}" alt="Tom Arline" class="member-photo">
+					<div class="member-info">
+						<div class="member-name">Tom Arline</div>
+						<div class="member-role">Bass</div>
+						<div class="member-years">1987–1989, 2026</div>
+					</div>
+				</div>
+
+				<div class="member-card">
+					<img th:src="@{/img/lineup/road.jpg}" alt="Kevin Berve" class="member-photo">
+					<div class="member-info">
+						<div class="member-name">Kevin Berve</div>
+						<div class="member-role">Guitar</div>
+						<div class="member-years">1987–1990, 2026</div>
+					</div>
+				</div>
+
+				<div class="member-card">
+					<img th:src="@{/img/lineup/rich.jpg}" alt="Rich Thibault" class="member-photo">
+					<div class="member-info">
+						<div class="member-name">Rich Thibault</div>
+						<div class="member-role">Drums</div>
+						<div class="member-years">1987–1991, 2026</div>
+					</div>
+				</div>
+
+				<div class="member-card">
+					<img th:src="@{/img/lineup/robert.png}" alt="Robert Wainwright" class="member-photo">
+					<div class="member-info">
+						<div class="member-name">Robert Wainwright</div>
+						<div class="member-role">Guitar</div>
+						<div class="member-years">1990–1992, 2026</div>
+					</div>
+				</div>
+
+				<div class="member-card">
+					<img th:src="@{/img/lineup/jason.png}" alt="Jason Ackerman" class="member-photo">
+					<div class="member-info">
+						<div class="member-name">Jason Ackerman</div>
+						<div class="member-role">Bass</div>
+						<div class="member-years">1991–1992, 2026</div>
+					</div>
+				</div>
+
+				<div class="member-card">
+					<img th:src="@{/img/lineup/sean.png}" alt="Sean Cote" class="member-photo">
+					<div class="member-info">
+						<div class="member-name">Sean Cote</div>
+						<div class="member-role">Drums</div>
+						<div class="member-years">1991–1992, 2026</div>
+					</div>
+				</div>
+
+			</section>
+		</div>
+	</main>
+
+	<th:block th:replace="~{layouts/main :: footer}"></th:block>
+
+</body>
+</html>

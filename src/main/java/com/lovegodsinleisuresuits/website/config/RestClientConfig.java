@@ -9,10 +9,10 @@ import org.springframework.web.client.RestClient;
 public class RestClientConfig {
 
 	@Bean
-    public RestClient restClient() {
-        return RestClient.builder()
-            .requestFactory(new JdkClientHttpRequestFactory()) // Or SimpleClientHttpRequestFactory
-            .build();
-    }
+	public RestClient restClient() {
+		return RestClient.builder()
+				.requestFactory(new JdkClientHttpRequestFactory()) // Or SimpleClientHttpRequestFactory
+				.build();
+	}
 
 }

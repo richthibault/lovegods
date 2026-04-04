@@ -1,18 +1,9 @@
-Members:
-Michael Bales - Lead Vocals (1987-1992)
-Rich Thibault - Drums (1987-1991)
-Kevin Berve - Guitar (1987 - 1990)
-Tom Arline - Bass (1987 - 1989)
-Robert Wainwright - Guitar (1990 - 1992)
-Chuck Curameng - Bass (1989-1991)
-Jason Ackerman - Bass (1991-1992)
-Sean Cote - Drums (1991-1992)
 
 ![The Lovegods in Leisure Suits, 1990 promo photo](/img/gallery/1990_promo-photo.jpg){.bio-photo .float-right}
 
 ![The Lovegods in Leisure Suits live, 1992](/img/gallery/Photos2.jpg){.bio-photo .float-left}
 
-The Lovegods in Leisure Suits were formed in 1987 in Central Florida. Lead singer Michael Bales met original bassist Tom Arline while hanging out on Orlando's fledgling punk rock scene. They found they shared not only a love of punk music, but also the same absurd sense of humor. Disgusted by the womanizing, toxic-male types he saw out on the scene, Michael made the comment "All this guy needs is a leisure suit, then he's be a real lovegod," and the Lovegods in Leisure Suits were born. 
+The Lovegods in Leisure Suits were formed in 1987 in Central Florida. Lead singer Michael Bales met original bassist Tom Arline while hanging out on Orlando's fledgling punk rock scene. They found they shared not only a love of punk music, but also the same absurd sense of humor. Disgusted by the womanizing, toxic-male types he saw out on the scene, Michael made the comment "All this guy needs is a leisure suit, then he'll be a real lovegod," and the Lovegods in Leisure Suits were born. 
 
 Taking their musical cues from acts as disparate as The Cramps, Devo, Dead Kennedys, Crass, and old blues artists, and their style and fashion cues from the cheesy lounge-lizard style of the 1970s, Michael and Tom set out to complete the band, finding guitarist Kevin Berve (aka Road Narrows) from a Musician Wanted ad. A Colorado native, Kevin brought a more rock and blues sensibility to the band.
 
@@ -26,6 +17,6 @@ The Lovegods began playing more regional shows, branching out to Tampa, Miami, A
 
 Original members Kevin and Tom left the band in 1990, and guitarist Robert Wainwright and bassist Chuck Curameng stepped in to fill the void. Together they would record 1990's *Groove On It*, a major progression in the band's approach to songwriting. Leaning more into metal and hard rock than previous efforts, tracks included Propaganda, The Day Elvis Presley Died, and a funky take on the disco-era classic You Sexy Thing. The album earned the band a prestigious "Best Band" Jammy Award from local Jam Magazine, and the band was featured at the awards ceremony at the Bob Carr Performing Arts Centre, performing cuts from the album as go go dancers gyrated wildly on stage.
 
-Chuck and Rich would leave the band in 1991, and were replaced by Jason Ackerman on bass and Sean Cote on drums. This final iteration of the band would gig heavily, putting on an elaborate stage featuring lighting effects and the RPM dancers. Finally, the band would call it quits in 1992 after the Fur Is Dead show at the Beacham Theater.
+Chuck and Rich would leave the band in 1991, and were replaced by Jason Ackerman on bass and Sean Cote on drums. This final iteration of the band would gig heavily, putting on an elaborate stage featuring lighting effects and the RPM dancers. Finally, the band would call it quits in 1992 after a Fur Is Dead show at the Beacham Theater.
 
 But in 2026, the band reunited with (almost) all past members to play one final show - the Club Space Fish reunion, at Conduit, Winter Park, FL.

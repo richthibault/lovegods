@@ -28,13 +28,13 @@ import lombok.Setter;
 @Service
 public class CaptchaService {
 
-	@Value("${google.project.id:}")
-	String googleProjectId;
+	// @Value("${google.project.id:}")
+	// String googleProjectId;
 
-	@Value("${google.recaptcha.sitekey:}")
-	String siteKey;
+	// @Value("${google.recaptcha.key.site:}")
+	// String siteKey;
 
-	@Value("${google.recaptcha.secretkey:}")
+	@Value("${google.recaptcha.key.secret:}")
 	String secretKey;
 
 	private static Pattern RESPONSE_PATTERN = Pattern.compile("[A-Za-z0-9_-]+");

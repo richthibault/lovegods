@@ -21,6 +21,9 @@ public class EmailService {
 	@Value("${email.to.default}")
 	String defaultToEmail;
 
+	@Value("${spring.application.name}")
+	String applicationName;
+
 	private final JavaMailSender mailSender;
 
 	Logger logger = LoggerFactory.getLogger(EmailService.class);
@@ -42,7 +45,7 @@ public class EmailService {
 			helper = new MimeMessageHelper(mimeMessage,true,"UTF-8");
 			helper.setFrom(defaultFromEmail);
 			helper.setTo(defaultToEmail);
-			helper.setSubject("LGILS: New Contact Form Submission");
+			helper.setSubject(applicationName + ": New Contact Form Submission");
 			helper.setText(emailText.toString(), false);
 			mailSender.send(mimeMessage);
 		} catch (MessagingException e) {
