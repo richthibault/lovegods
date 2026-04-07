@@ -821,6 +821,77 @@ footer strong {
   }
 }
 
+/* ── Bio — Awards ────────────────────────────────────────────────────────── */
+
+.bio-awards {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-10) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.bio-awards li {
+  position: relative;
+  padding: var(--space-3) var(--space-5) var(--space-3) var(--space-10);
+  background: var(--color-surface);
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  line-height: var(--leading-normal);
+}
+
+.bio-awards li::before {
+  content: '★';
+  position: absolute;
+  left: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gold);
+  font-size: var(--text-lg);
+  line-height: 1;
+}
+
+/* ── Bio — Press Quotes ───────────────────────────────────────────────────── */
+
+.bio-quote {
+  position: relative;
+  margin: 0 0 var(--space-5) 0;
+  padding: var(--space-5) var(--space-6) var(--space-4) var(--space-10);
+  border-left: 3px solid var(--color-green);
+  background: var(--color-surface);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.bio-quote::before {
+  content: '\201C';
+  position: absolute;
+  left: var(--space-2);
+  top: 0;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--color-green);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.bio-quote p {
+  margin-bottom: var(--space-2) !important;
+  font-style: italic;
+  color: var(--color-text-primary);
+}
+
+.bio-quote cite {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-green-bright);
+}
+
 /* ── Gallery ─────────────────────────────────────────────────────────────── */
 
 .gallery-grid {
