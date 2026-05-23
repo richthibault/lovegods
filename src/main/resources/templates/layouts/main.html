@@ -14,13 +14,22 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
 
-		<link rel="stylesheet" th:href="@{/css/styles.css?v=4}">
+		<link rel="stylesheet" th:href="@{/css/styles.css?v=5}">
 
 </head>
 
 <body>
 
 	<div th:fragment="header" th:remove="tag">
+
+		<a class="cd-banner" href="https://spacefishrecords.com/product/groove-on-it-cd" target="_blank" rel="noopener">
+			<img th:src="@{/img/albums/groove-on-it-cover.png}" alt="" class="cd-banner-cover">
+			<div class="cd-banner-text">
+				<span class="cd-banner-eyebrow">Newly Remastered &middot; Now on CD</span>
+				<span class="cd-banner-title">Groove On It</span>
+			</div>
+			<span class="cd-banner-cta">Order&nbsp;Now <span class="cd-banner-arrow" aria-hidden="true">&rarr;</span></span>
+		</a>
 
 		<header>
 			<nav class="navbar" aria-label="Main">

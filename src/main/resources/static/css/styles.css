@@ -257,6 +257,151 @@ a:visited {
   border-radius: var(--radius-sm);
 }
 
+/* ── CD Banner (site-wide ad) ────────────────────────────────────────────── */
+
+.cd-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-2) var(--space-8);
+  text-decoration: none;
+  color: var(--color-gold-on);
+  background:
+    repeating-linear-gradient(
+      135deg,
+      oklch(60% 0.21 28) 0 18px,
+      oklch(55% 0.22 25) 18px 36px
+    );
+  border-bottom: 2px solid var(--color-gold-deep);
+  position: relative;
+  overflow: hidden;
+  transition: filter var(--transition-fast);
+}
+
+.cd-banner:visited { color: var(--color-gold-on); }
+
+.cd-banner::after {
+  /* warm gold sheen across the stripes */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    oklch(75% 0.19 85 / 0.18) 0%,
+    transparent 35%,
+    transparent 65%,
+    oklch(75% 0.19 85 / 0.18) 100%
+  );
+  pointer-events: none;
+}
+
+.cd-banner:hover {
+  filter: brightness(1.08) saturate(1.05);
+}
+
+.cd-banner-cover {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  box-shadow:
+    0 0 0 2px var(--color-gold-bright),
+    0 4px 12px oklch(0% 0 0 / 0.4);
+  transform: rotate(-3deg);
+  transition: transform var(--transition-base);
+  position: relative;
+  z-index: 1;
+}
+
+.cd-banner:hover .cd-banner-cover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.cd-banner-text {
+  display: flex;
+  flex-direction: column;
+  line-height: var(--leading-tight);
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.cd-banner-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-gold-bright);
+  text-shadow: 0 1px 2px oklch(0% 0 0 / 0.5);
+}
+
+.cd-banner-title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: oklch(98% 0.02 80);
+  text-shadow: 0 1px 2px oklch(0% 0 0 / 0.6);
+}
+
+.cd-banner-cta {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-gold);
+  color: var(--color-gold-on);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 2px 0 var(--color-gold-deep);
+  white-space: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.cd-banner:hover .cd-banner-cta {
+  background: var(--color-gold-bright);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 0 var(--color-gold-deep);
+}
+
+.cd-banner-arrow {
+  display: inline-block;
+  transition: transform var(--transition-base);
+}
+
+.cd-banner:hover .cd-banner-arrow {
+  transform: translateX(3px);
+}
+
+@media (max-width: 640px) {
+  .cd-banner {
+    padding: var(--space-2) var(--space-4);
+    gap: var(--space-3);
+  }
+  .cd-banner-cover {
+    width: 44px;
+    height: 44px;
+  }
+  .cd-banner-eyebrow {
+    font-size: 0.62rem;
+    letter-spacing: var(--tracking-wider);
+  }
+  .cd-banner-title {
+    font-size: var(--text-base);
+  }
+  .cd-banner-cta {
+    font-size: var(--text-xs);
+    padding: var(--space-2) var(--space-3);
+  }
+}
+
 /* ── Navbar ──────────────────────────────────────────────────────────────── */
 
 .navbar {
