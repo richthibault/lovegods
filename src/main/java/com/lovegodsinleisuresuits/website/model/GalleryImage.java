@@ -8,6 +8,7 @@ import lombok.Data;
 public class GalleryImage {
 
 	private String src;
+	private String thumb;
 	private String alt;
 
 }

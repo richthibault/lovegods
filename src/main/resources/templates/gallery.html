@@ -15,15 +15,58 @@
 		<div class="container">
 			<h1>Gallery</h1>
 
-			<div class="gallery-grid">
-				<button class="gallery-thumb"
-						th:each="image, iter : ${images}"
-						th:data-src="${image.src}"
-						th:data-alt="${image.alt}"
-						th:aria-label="|View full size: ${image.alt}|">
-					<img th:src="${image.src}" th:alt="${image.alt}" loading="lazy">
+			<div class="gallery-tabs" role="tablist" aria-label="Gallery eras">
+				<button class="gallery-tab is-active"
+						id="tab-reunion"
+						role="tab"
+						aria-selected="true"
+						aria-controls="panel-reunion"
+						data-panel="reunion">
+					<span class="gallery-tab-year">2026</span>
+					<span class="gallery-tab-label">Reunion</span>
+				</button>
+				<button class="gallery-tab"
+						id="tab-classic"
+						role="tab"
+						aria-selected="false"
+						tabindex="-1"
+						aria-controls="panel-classic"
+						data-panel="classic">
+					<span class="gallery-tab-year">1987&ndash;1992</span>
+					<span class="gallery-tab-label">Classic</span>
 				</button>
 			</div>
+
+			<section class="gallery-panel is-active"
+					 id="panel-reunion"
+					 role="tabpanel"
+					 aria-labelledby="tab-reunion">
+				<div class="gallery-grid">
+					<button class="gallery-thumb"
+							th:each="image : ${reunionImages}"
+							th:data-src="${image.src}"
+							th:data-alt="${image.alt}"
+							th:aria-label="|View full size: ${image.alt}|">
+						<img th:src="${image.thumb}" th:alt="${image.alt}" loading="lazy">
+					</button>
+				</div>
+			</section>
+
+			<section class="gallery-panel"
+					 id="panel-classic"
+					 role="tabpanel"
+					 aria-labelledby="tab-classic"
+					 hidden>
+				<div class="gallery-grid">
+					<button class="gallery-thumb"
+							th:each="image : ${classicImages}"
+							th:data-src="${image.src}"
+							th:data-alt="${image.alt}"
+							th:aria-label="|View full size: ${image.alt}|">
+						<img th:src="${image.thumb}" th:alt="${image.alt}" loading="lazy">
+					</button>
+				</div>
+			</section>
 		</div>
 	</main>
 

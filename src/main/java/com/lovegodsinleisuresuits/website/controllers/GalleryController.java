@@ -25,15 +25,22 @@ public class GalleryController extends BaseController {
 
 	@GetMapping
 	public String gallery(Model model) throws IOException {
-		Resource[] resources = applicationContext.getResources("classpath:static/img/gallery/*.*");
-		List<GalleryImage> images = Arrays.stream(resources)
+		model.addAttribute("reunionImages", loadImages("reunion"));
+		model.addAttribute("classicImages", loadImages("classic"));
+		return "gallery";
+	}
+
+	private List<GalleryImage> loadImages(String folder) throws IOException {
+		Resource[] resources = applicationContext.getResources("classpath:static/img/gallery/" + folder + "/*.*");
+		return Arrays.stream(resources)
 				.map(Resource::getFilename)
 				.filter(name -> name != null && name.matches("(?i).*\\.(jpg|jpeg|png|gif|webp)$"))
 				.sorted()
-				.map(name -> new GalleryImage("/img/gallery/" + name, toAltText(name)))
+				.map(name -> new GalleryImage(
+						"/img/gallery/" + folder + "/" + name,
+						"/img/gallery/" + folder + "/thumbs/" + name,
+						toAltText(name)))
 				.toList();
-		model.addAttribute("images", images);
-		return "gallery";
 	}
 
 	private String toAltText(String filename) {

@@ -1039,6 +1039,89 @@ footer strong {
 
 /* ── Gallery ─────────────────────────────────────────────────────────────── */
 
+.gallery-tabs {
+  display: inline-flex;
+  gap: 0;
+  margin: 0 0 var(--space-8);
+  padding: var(--space-1);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  position: relative;
+}
+
+.gallery-tab {
+  appearance: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: var(--color-text-secondary);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 1;
+  transition: color var(--transition-base), background var(--transition-base), transform var(--transition-base);
+}
+
+.gallery-tab-year {
+  font-size: var(--text-2xs);
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-text-muted);
+  transition: color var(--transition-base);
+}
+
+.gallery-tab-label {
+  font-size: var(--text-lg);
+  letter-spacing: var(--tracking-wider);
+  font-weight: var(--weight-bold);
+}
+
+.gallery-tab:hover {
+  color: var(--color-text-primary);
+}
+
+.gallery-tab:hover .gallery-tab-year {
+  color: var(--color-gold-bright);
+}
+
+.gallery-tab:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.gallery-tab.is-active {
+  background: var(--color-accent);
+  color: var(--color-accent-on);
+  box-shadow: 0 6px 20px -8px var(--color-gold-glow);
+}
+
+.gallery-tab.is-active .gallery-tab-year {
+  color: var(--color-accent-on);
+  opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+  .gallery-tabs {
+    display: flex;
+    width: 100%;
+  }
+  .gallery-tab {
+    flex: 1;
+    padding: var(--space-3) var(--space-4);
+  }
+  .gallery-tab-label {
+    font-size: var(--text-base);
+  }
+}
+
+.gallery-panel { display: none; }
+.gallery-panel.is-active { display: block; }
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
